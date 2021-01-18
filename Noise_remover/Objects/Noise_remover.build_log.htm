@@ -17,7 +17,7 @@ Library Manager: ArmAr.exe V6.14
 Hex Converter:   FromElf.exe V6.14
 CPU DLL:         SARMCM3.DLL V5.31.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      UL2CM3.DLL V1.163.4.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
@@ -26,25 +26,216 @@ Project File Date:  01/18/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'stm32f411'
-main.c(21): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-main.c(17): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+Rebuild target 'stm32f411'
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+clock.c(1): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+clock.c(5): warning: no previous prototype for function 'SystemClock_Config' [-Wmissing-prototypes]
+void SystemClock_Config(void)
+     ^
+clock.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystemClock_Config(void)
+^
+static 
+clock.c(69): warning: unused parameter 'file' [-Wunused-parameter]
+void _Error_Handler(char *file, int line)
+                          ^
+clock.c(69): warning: unused parameter 'line' [-Wunused-parameter]
+void _Error_Handler(char *file, int line)
+                                    ^
+clock.c(70): warning: function '_Error_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+6 warnings generated.
+compiling clock.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+main.c(1): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+main.c(2): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+main.c(27): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
 void SysTick_Handler(void)
      ^
-main.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+main.c(27): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void SysTick_Handler(void)
 ^
 static 
-main.c(3): warning: no previous extern declaration for non-static variable 'freq' [-Wmissing-variable-declarations]
-uint32_t freq ;
+main.c(4): warning: no previous extern declaration for non-static variable 'freq' [-Wmissing-variable-declarations]
+uint32_t freq;
          ^
-main.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t freq ;
+main.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t freq;
 ^
-3 warnings generated.
+main.c(5): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+uint32_t counter;
+         ^
+main.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t counter;
+^
+25 warnings generated.
 compiling main.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+waveforms.c(1): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+waveforms.c(4): warning: no previous extern declaration for non-static variable 'inputSignal_f32_1kHz_15kHz' [-Wmissing-variable-declarations]
+float32_t inputSignal_f32_1kHz_15kHz[320] =
+          ^
+waveforms.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+float32_t inputSignal_f32_1kHz_15kHz[320] =
+^
+22 warnings generated.
+compiling waveforms.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BayesFunctions/arm_gaussian_naive_bayes_predict_f32.c(27): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -107,8 +298,174 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_m
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
     ydiff = Y - yIndex;
               ~ ^~~~~~
-20 warnings generated.
+21 warnings generated.
 compiling BayesFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_conj_f32.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(30): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_conj_q15.c(193): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    *pDst++ = __SSAT(-in1, 16);
+            ~ ^~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armclang.h(1059): note: expanded from macro '__SSAT'
+#define __SSAT             __builtin_arm_ssat
+                           ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(36): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_q15.c(197): warning: cast from 'const short *' to 'short *' drops const qualifier [-Wcast-qual]
+    in = read_q15x2_ia ((q15_t **) &pSrc);
+                                   ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(39): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_squared_q15.c(196): warning: cast from 'const short *' to 'short *' drops const qualifier [-Wcast-qual]
+    in = read_q15x2_ia ((q15_t **) &pSrc);
+                                   ^
+24 warnings generated.
+compiling ComplexMathFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_abs_f32.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(64): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_scale_q31.c(116): warning: implicit conversion changes signedness: 'int' to 'int8_t' (aka 'signed char') [-Wsign-conversion]
+        int8_t sign = (kShift & 0x80);
+               ~~~~    ~~~~~~~^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(66): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_shift_q15.c(226): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+      *pDst++ = __SSAT(((q31_t) *pSrc++ << shiftBits), 16);
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armclang.h(1059): note: expanded from macro '__SSAT'
+#define __SSAT             __builtin_arm_ssat
+                           ^
+23 warnings generated.
+compiling BasicMathFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ControllerFunctions/arm_pid_init_f32.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -194,87 +551,12 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/Contro
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ControllerFunctions/arm_sin_cos_f32.c(94): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
   in = in - (int32_t)in;
           ~ ^~~~~~~~~~~
-24 warnings generated.
+25 warnings generated.
 compiling ControllerFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_conj_f32.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(30): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_conj_q15.c(193): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    *pDst++ = __SSAT(-in1, 16);
-            ~ ^~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armclang.h(1059): note: expanded from macro '__SSAT'
-#define __SSAT             __builtin_arm_ssat
-                           ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(36): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_q15.c(197): warning: cast from 'const short *' to 'short *' drops const qualifier [-Wcast-qual]
-    in = read_q15x2_ia ((q15_t **) &pSrc);
-                                   ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c(39): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/ComplexMathFunctions/arm_cmplx_mag_squared_q15.c(196): warning: cast from 'const short *' to 'short *' drops const qualifier [-Wcast-qual]
-    in = read_q15x2_ia ((q15_t **) &pSrc);
-                                   ^
-23 warnings generated.
-compiling ComplexMathFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/DistanceFunctions/arm_boolean_distance.c(28): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -471,351 +753,12 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/Distan
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/DistanceFunctions/arm_yule_distance.c(66): warning: implicit conversion loses floating-point precision: 'double' to 'float32_t' (aka 'float') [-Wimplicit-float-conversion]
     return(1.0*r / (r/2.0 + ctt * cff));
     ~~~~~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~
-41 warnings generated.
-compiling DistanceFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_abs_f32.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(64): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_scale_q31.c(116): warning: implicit conversion changes signedness: 'int' to 'int8_t' (aka 'signed char') [-Wsign-conversion]
-        int8_t sign = (kShift & 0x80);
-               ~~~~    ~~~~~~~^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c(66): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/BasicMathFunctions/arm_shift_q15.c(226): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-      *pDst++ = __SSAT(((q31_t) *pSrc++ << shiftBits), 16);
-              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armclang.h(1059): note: expanded from macro '__SSAT'
-#define __SSAT             __builtin_arm_ssat
-                           ^
-22 warnings generated.
-compiling BasicMathFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(30): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(58): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
-  x = (uint16_t)x + 0x2000;
-    ~ ~~~~~~~~~~~~^~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(61): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
-    x = (uint16_t)x + 0x8000;
-      ~ ~~~~~~~~~~~~^~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(68): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-  fract = (x - (index << FAST_MATH_Q15_SHIFT)) << 9;
-        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(79): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-  return (cosVal << 1);
-  ~~~~~~  ~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(31): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(58): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
-  x = (uint32_t)x + 0x20000000;
-    ~ ~~~~~~~~~~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(61): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
-    x = (uint32_t)x + 0x80000000;
-      ~ ~~~~~~~~~~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(75): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-  cosVal = (q63_t) (0x80000000 - fract) * a >> 32;
-                               ~ ^~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(33): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(60): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
-    x = (uint16_t)x + 0x8000;
-      ~ ~~~~~~~~~~~~^~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(67): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-  fract = (x - (index << FAST_MATH_Q15_SHIFT)) << 9;
-        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(78): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-  return (sinVal << 1);
-  ~~~~~~  ~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(34): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q31.c(59): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
-    x = (uint32_t)x + 0x80000000;
-      ~ ~~~~~~~~~~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q31.c(73): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-  sinVal = (q63_t) (0x80000000 - fract) * a >> 32;
-                               ~ ^~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(35): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(68): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    signBits1 = __CLZ(number) - 17;
-                ~~~~~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(73): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-      number = number << signBits1;
-             ~ ~~~~~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(77): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-      number = number << (signBits1 - 1);
-             ~ ~~~~~~~^~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(96): warning: implicit conversion loses integer precision: 'q31_t' (aka 'int') to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    var1 = (q31_t) (temp_float1 * 16384);
-         ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(103): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-                                        (q31_t) half) >> 15))) >> 15)) << 2;
-                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(109): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-                                        (q31_t) half) >> 15))) >> 15)) << 2;
-                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(115): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-                                        (q31_t) half) >> 15))) >> 15)) << 2;
-                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(118): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    var1 = ((q15_t) (((q31_t) temp1 * var1) >> 15)) << 1;
-         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(36): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q31.c(68): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    signBits1 = __CLZ(number) - 1;
-                ~~~~~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q31.c(86): warning: implicit conversion from 'q31_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    temp_float1 = number * 4.6566128731e-010f;
-                  ^~~~~~ ~
 42 warnings generated.
-compiling FastMathFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SVMFunctions/arm_svm_linear_init_f32.c(27): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-20 warnings generated.
-compiling SVMFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/arm_mat_add_f32.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c(42): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/arm_mat_mult_fast_q31.c(174): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-      i = i + (numColsA << 1U);
-            ~  ~~~~~~~~~^~~~~
-21 warnings generated.
-compiling MatrixFunctions.c...
+compiling DistanceFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/CommonTables/CommonTables.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/CommonTables/arm_common_tables.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -1275,8 +1218,292 @@ const arm_rfft_instance_q15 arm_rfft_sR_q15_len8192 = {
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/CommonTables/arm_const_structs.c(649): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 const arm_rfft_instance_q15 arm_rfft_sR_q15_len8192 = {
       ^
-114 warnings generated.
+115 warnings generated.
 compiling CommonTables.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_f32.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(30): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(58): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
+  x = (uint16_t)x + 0x2000;
+    ~ ~~~~~~~~~~~~^~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(61): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
+    x = (uint16_t)x + 0x8000;
+      ~ ~~~~~~~~~~~~^~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(68): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+  fract = (x - (index << FAST_MATH_Q15_SHIFT)) << 9;
+        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q15.c(79): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+  return (cosVal << 1);
+  ~~~~~~  ~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(31): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(58): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
+  x = (uint32_t)x + 0x20000000;
+    ~ ~~~~~~~~~~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(61): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
+    x = (uint32_t)x + 0x80000000;
+      ~ ~~~~~~~~~~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_cos_q31.c(75): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+  cosVal = (q63_t) (0x80000000 - fract) * a >> 32;
+                               ~ ^~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(60): warning: implicit conversion changes signedness: 'int' to 'q15_t' (aka 'short') [-Wsign-conversion]
+    x = (uint16_t)x + 0x8000;
+      ~ ~~~~~~~~~~~~^~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(67): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+  fract = (x - (index << FAST_MATH_Q15_SHIFT)) << 9;
+        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q15.c(78): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+  return (sinVal << 1);
+  ~~~~~~  ~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(34): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q31.c(59): warning: implicit conversion changes signedness: 'unsigned int' to 'q31_t' (aka 'int') [-Wsign-conversion]
+    x = (uint32_t)x + 0x80000000;
+      ~ ~~~~~~~~~~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sin_q31.c(73): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+  sinVal = (q63_t) (0x80000000 - fract) * a >> 32;
+                               ~ ^~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(35): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(68): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    signBits1 = __CLZ(number) - 17;
+                ~~~~~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(73): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+      number = number << signBits1;
+             ~ ~~~~~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(77): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+      number = number << (signBits1 - 1);
+             ~ ~~~~~~~^~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(96): warning: implicit conversion loses integer precision: 'q31_t' (aka 'int') to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    var1 = (q31_t) (temp_float1 * 16384);
+         ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(103): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+                                        (q31_t) half) >> 15))) >> 15)) << 2;
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(109): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+                                        (q31_t) half) >> 15))) >> 15)) << 2;
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(115): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+                                        (q31_t) half) >> 15))) >> 15)) << 2;
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q15.c(118): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    var1 = ((q15_t) (((q31_t) temp1 * var1) >> 15)) << 1;
+         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c(36): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q31.c(68): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    signBits1 = __CLZ(number) - 1;
+                ~~~~~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FastMathFunctions/arm_sqrt_q31.c(86): warning: implicit conversion from 'q31_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    temp_float1 = number * 4.6566128731e-010f;
+                  ^~~~~~ ~
+43 warnings generated.
+compiling FastMathFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/arm_mat_add_f32.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c(42): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/MatrixFunctions/arm_mat_mult_fast_q31.c(174): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      i = i + (numColsA << 1U);
+            ~  ~~~~~~~~~^~~~~
+22 warnings generated.
+compiling MatrixFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SVMFunctions/arm_svm_linear_init_f32.c(27): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+21 warnings generated.
+compiling SVMFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/StatisticsFunctions/arm_entropy_f32.c(27): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -1395,136 +1622,12 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/Statis
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/StatisticsFunctions/arm_var_q31.c(209): warning: implicit conversion loses integer precision: 'long long' to 'q31_t' (aka 'int') [-Wshorten-64-to-32]
   *pResult = (meanOfSquares - squareOfMean) >> 15U;
            ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-33 warnings generated.
-compiling StatisticsFunctions.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ( in) - 1));
-                              ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t) (__CLZ(-in) - 1));
-                              ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ( in) - 17));
-                             ~~~~~  ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-      signBits = ((uint32_t)(__CLZ(-in) - 17));
-                             ~~~~~ ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    in = (in << signBits);
-       ~  ~~~^~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-      out = (q15_t) (((q31_t) out * tempVal) >> 14);
-                      ^~~~~~~~~~~ ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    n1 = __CLZ(hi) - 32;
-         ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        n1 = __CLZ(lo);
-             ~~~~~ ^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
-        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
-                                              ~  ~~~^~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~           ^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
-    absNum = num > 0 ? num : -num;
-           ~                 ^~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
-    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
-                     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
-  typedef struct
-          ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x0 = S->x1 +  i      * xSpacing;
-                    ^      ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
-      x1 = S->x1 + (i + 1) * xSpacing;
-                    ~~^~~  ~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    xdiff = X - xIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
-    ydiff = Y - yIndex;
-              ~ ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(40): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(104): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        arm_heapify(pA, blockSize, i, S->dir); 
-        ~~~~~~~~~~~                ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(106): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-    for (i = blockSize - 1; i >= 0; i--)
-           ~ ~~~~~~~~~~^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(114): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        arm_heapify(pA, i, 0, S->dir);
-        ~~~~~~~~~~~     ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(42): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(67): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        arm_merge_sort_core_f32(pA, begin,  middle, pB, dir);  // Sort the left part
-        ~~~~~~~~~~~~~~~~~~~~~~~             ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(68): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        arm_merge_sort_core_f32(pA, middle,    end, pB, dir);  // Sort the right part
-        ~~~~~~~~~~~~~~~~~~~~~~~     ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(70): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-        topDownMerge(pB, begin, middle, end, pA, dir);
-        ~~~~~~~~~~~~            ^~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(2317): warning: padding struct 'arm_merge_sort_instance_f32' with 3 bytes to align 'buffer' [-Wpadded]
-    float32_t * buffer;      /**< Working buffer */
-                ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(44): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(101): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
-    return j; 
-    ~~~~~~ ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(112): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-        pivot = arm_quick_sort_partition_f32(pSrc, first, last, dir);
-              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(175): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-    arm_quick_sort_core_f32(pA, 0, blockSize-1, S->dir);
-    ~~~~~~~~~~~~~~~~~~~~~~~        ~~~~~~~~~^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(48): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_spline_interp_f32.c(154): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-    int32_t n = S->n_x;
-            ~   ~~~^~~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(2357): warning: padding struct 'arm_spline_instance_f32' with 3 bytes to align 'x' [-Wpadded]
-    const float32_t * x;       /**< x values */
-                      ^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(49): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_spline_interp_init_f32.c(151): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
-    for (i=n-2; i>=0; i--) 
-          ~~^~
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(62): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_q7_to_q15.c(177): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
-    *pDst++ = (q15_t) * pIn++ << 8;
-            ~ ~~~~~~~~~~~~~~~~^~~~
 34 warnings generated.
-compiling SupportFunctions.c...
-compiling stm32f4xx_hal.c...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(217): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-{
-^
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(83): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
-./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(415): warning: In file included from...
-D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(54): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
-  uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
-                         ^
-2 warnings generated.
-compiling stm32f4xx_hal_cortex.c...
+compiling StatisticsFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FilteringFunctions/arm_biquad_cascade_df1_32x64_init_q31.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -2636,8 +2739,150 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/Filter
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/FilteringFunctions/arm_lms_q31.c(160): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
     acc = (uint32_t) acc_l >> lShift | acc_h << uShift;
                                      ~ ~~~~~~^~~~~~~~~
-320 warnings generated.
+321 warnings generated.
 compiling FilteringFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ( in) - 1));
+                              ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1224): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t) (__CLZ(-in) - 1));
+                              ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1271): warning: implicit conversion changes signedness: 'q15_t' (aka 'short') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ( in) - 17));
+                             ~~~~~  ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1275): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+      signBits = ((uint32_t)(__CLZ(-in) - 17));
+                             ~~~~~ ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1279): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    in = (in << signBits);
+       ~  ~~~^~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1295): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+      out = (q15_t) (((q31_t) out * tempVal) >> 14);
+                      ^~~~~~~~~~~ ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1337): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    n1 = __CLZ(hi) - 32;
+         ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1343): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        n1 = __CLZ(lo);
+             ~~~~~ ^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1379): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'unsigned int' [-Wsign-conversion]
+        *normalized = (((uint32_t) lo) >> n1) | (hi << (32 - n1));
+                                              ~  ~~~^~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~           ^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1394): warning: operand of ? changes signedness: 'q63_t' (aka 'long long') to 'uint64_t' (aka 'unsigned long long') [-Wsign-conversion]
+    absNum = num > 0 ? num : -num;
+           ~                 ^~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3203): warning: padding struct 'arm_cfft_instance_f64' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float64_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3200): warning: padding size of 'arm_cfft_instance_f64' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3172): warning: padding struct 'arm_cfft_instance_f32' with 2 bytes to align 'pTwiddle' [-Wpadded]
+    const float32_t *pTwiddle;         /**< points to the Twiddle factor table. */
+                     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(3169): warning: padding size of 'arm_cfft_instance_f32' with 2 bytes to alignment boundary [-Wpadded]
+  typedef struct
+          ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6510): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x0 = S->x1 +  i      * xSpacing;
+                    ^      ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(6511): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+      x1 = S->x1 + (i + 1) * xSpacing;
+                    ~~^~~  ~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8583): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    xdiff = X - xIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(8586): warning: implicit conversion from 'int32_t' (aka 'int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+    ydiff = Y - yIndex;
+              ~ ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(40): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(104): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        arm_heapify(pA, blockSize, i, S->dir); 
+        ~~~~~~~~~~~                ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(106): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+    for (i = blockSize - 1; i >= 0; i--)
+           ~ ~~~~~~~~~~^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_heap_sort_f32.c(114): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        arm_heapify(pA, i, 0, S->dir);
+        ~~~~~~~~~~~     ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(42): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(67): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        arm_merge_sort_core_f32(pA, begin,  middle, pB, dir);  // Sort the left part
+        ~~~~~~~~~~~~~~~~~~~~~~~             ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(68): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        arm_merge_sort_core_f32(pA, middle,    end, pB, dir);  // Sort the right part
+        ~~~~~~~~~~~~~~~~~~~~~~~     ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_merge_sort_f32.c(70): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        topDownMerge(pB, begin, middle, end, pA, dir);
+        ~~~~~~~~~~~~            ^~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(2317): warning: padding struct 'arm_merge_sort_instance_f32' with 3 bytes to align 'buffer' [-Wpadded]
+    float32_t * buffer;      /**< Working buffer */
+                ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(44): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(101): warning: implicit conversion changes signedness: 'int32_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+    return j; 
+    ~~~~~~ ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(112): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
+        pivot = arm_quick_sort_partition_f32(pSrc, first, last, dir);
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_quick_sort_f32.c(175): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+    arm_quick_sort_core_f32(pA, 0, blockSize-1, S->dir);
+    ~~~~~~~~~~~~~~~~~~~~~~~        ~~~~~~~~~^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(48): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_spline_interp_f32.c(154): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
+    int32_t n = S->n_x;
+            ~   ~~~^~~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_barycenter_f32.c(27): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(2357): warning: padding struct 'arm_spline_instance_f32' with 3 bytes to align 'x' [-Wpadded]
+    const float32_t * x;       /**< x values */
+                      ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(49): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_spline_interp_init_f32.c(151): warning: implicit conversion changes signedness: 'unsigned int' to 'int32_t' (aka 'int') [-Wsign-conversion]
+    for (i=n-2; i>=0; i--) 
+          ~~^~
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c(62): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/SupportFunctions/arm_q7_to_q15.c(177): warning: implicit conversion loses integer precision: 'int' to 'q15_t' (aka 'short') [-Wimplicit-int-conversion]
+    *pDst++ = (q15_t) * pIn++ << 8;
+            ~ ~~~~~~~~~~~~~~~~^~~~
+35 warnings generated.
+compiling SupportFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c(36): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+2 warnings generated.
+compiling stm32f4xx_hal.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/TransformFunctions/arm_bitreversal.c(29): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Include\arm_math.h(1220): warning: implicit conversion changes signedness: 'q31_t' (aka 'int') to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
@@ -3594,16 +3839,126 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/DSP/Source/Transf
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armclang.h(1447): note: expanded from macro '__PKHBT'
 #define __PKHBT(ARG1,ARG2,ARG3)          ( ((((uint32_t)(ARG1))          ) & 0x0000FFFFUL) |  \
                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
-282 warnings generated.
+283 warnings generated.
 compiling TransformFunctions.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(83): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(217): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(83): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(415): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(54): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
+  uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
+                         ^
+4 warnings generated.
+compiling stm32f4xx_hal_cortex.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(108): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+2 warnings generated.
 compiling stm32f4xx_hal_gpio.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(26): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(365): warning: unused parameter 'Regulator' [-Wunused-parameter]
 void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
                                      ^
-1 warning generated.
+3 warnings generated.
 compiling stm32f4xx_hal_pwr.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c(25): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+2 warnings generated.
 compiling stm32f4xx_hal_pwr_ex.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c(69): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+2 warnings generated.
 compiling stm32f4xx_hal_rcc.c...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c(25): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(29): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(33): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c(25): warning: In file included from...
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
 ./RTE/Device/STM32F411VETx\stm32f4xx_hal_conf.h(399): warning: In file included from...
@@ -3611,13 +3966,26 @@ D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32
 D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h(405): warning: padding size of 'RCC_PeriphCLKInitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
 typedef struct
         ^
-1 warning generated.
+3 warnings generated.
 compiling stm32f4xx_hal_rcc_ex.c...
 assembling startup_stm32f411xe.s...
+<built-in>(372): warning: In file included from...
+<command line>(6): warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define ARM_MATH_CM4. 1
+                    ^
+RTE/Device/STM32F411VETx/system_stm32f4xx.c(49): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(155): warning: In file included from...
+D:/Users/Kitagoh/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(52): warning: '__FPU_PRESENT' macro redefined [-Wmacro-redefined]
+#define __FPU_PRESENT             1U       /*!< FPU present                                   */
+        ^
+<command line>(7): note: previous definition is here
+#define __FPU_PRESENT 1
+        ^
+2 warnings generated.
 compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=844 RO-data=440 RW-data=12 ZI-data=1640  
-".\Objects\Noise_remover.axf" - 0 Error(s), 1003 Warning(s).
+Program Size: Code=2572 RO-data=456 RW-data=12 ZI-data=1640  
+".\Objects\Noise_remover.axf" - 0 Error(s), 1082 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -3707,7 +4075,7 @@ Package Vendor: Keil
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:18
+Build Time Elapsed:  00:00:25
 </pre>
 </body>
 </html>

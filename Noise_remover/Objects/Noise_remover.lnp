@@ -1,5 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
+".\objects\clock.o"
+".\objects\waveforms.o"
 ".\objects\basicmathfunctions.o"
 ".\objects\bayesfunctions.o"
 ".\objects\commontables.o"

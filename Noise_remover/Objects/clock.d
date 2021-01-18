@@ -1,4 +1,4 @@
-./objects/main.o: main.c \
+./objects/clock.o: clock.c \
   D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h \
   RTE\_stm32f411\RTE_Components.h \
@@ -25,10 +25,4 @@
   D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
   D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
   D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
-  D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
-  D:\Users\Kitagoh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\DSP\Include\arm_math.h \
-  D:\Users\Kitagoh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\float.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\limits.h
+  D:\Users\Kitagoh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
